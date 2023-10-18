@@ -1,0 +1,25 @@
+class Result {
+
+    /*
+     * Complete the 'marsExploration' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts STRING s as parameter.
+     */
+
+    public static int marsExploration(String s) {
+    int errors = 0;
+
+    for (int i = 0; i < s.length(); i++) {
+        char c = s.charAt(i);
+        char expectedChar = (i % 3 == 0 || i % 3 == 2) ? 'S' : 'O';
+
+        if (c != expectedChar) {
+            errors++;
+        }
+    }
+
+    return errors;
+}
+
+}
